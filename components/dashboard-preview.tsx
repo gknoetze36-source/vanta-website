@@ -5,10 +5,17 @@ import { Activity, CalendarCheck, MessageSquare, Workflow } from "lucide-react";
 import { VantaLogo } from "./vanta-logo";
 
 const rows = [
-  ["Customer request", "Booking", "Confirmed", "09:30"],
-  ["Follow-up", "Reminder", "Queued", "10:15"],
-  ["Workflow task", "Message", "Sent", "11:00"]
+  ["Customer request", "Booking", "Confirmed"],
+  ["Follow-up", "Reminder", "Queued"],
+  ["Workflow task", "Message", "Sent"]
 ];
+
+const modules = [
+  ["Bookings", "Capture", CalendarCheck],
+  ["Messages", "Automate", MessageSquare],
+  ["Workflows", "Route", Workflow],
+  ["Recovery", "Follow up", Activity]
+] as const;
 
 export function DashboardPreview() {
   return (
@@ -56,16 +63,11 @@ export function DashboardPreview() {
           </div>
 
           <div className="mb-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
-            {[
-              ["Bookings", "1,284", CalendarCheck],
-              ["Messages", "18.7k", MessageSquare],
-              ["Workflows", "342", Workflow],
-              ["Recovery", "31%", Activity]
-            ].map(([label, value, Icon]) => (
+            {modules.map(([label, action, Icon]) => (
               <div key={label as string} className="rounded-3xl border border-white/10 bg-white/[0.04] p-4">
                 <Icon className="mb-5 size-5 text-chartreuse" />
                 <p className="text-sm text-white/50">{label as string}</p>
-                <strong className="font-heading text-2xl">{value as string}</strong>
+                <strong className="font-heading text-xl">{action as string}</strong>
               </div>
             ))}
           </div>
@@ -102,7 +104,7 @@ export function DashboardPreview() {
                       <div>{row[0]}</div>
                       <div className="text-white/45">{row[1]} / {row[2]}</div>
                     </div>
-                    <div className="text-chartreuse">{row[3]}</div>
+                    <div className="text-chartreuse">Ready</div>
                   </div>
                 ))}
               </div>

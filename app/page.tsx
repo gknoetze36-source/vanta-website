@@ -86,15 +86,11 @@ export default function Home() {
               <Button href="mailto:hello@vantaautomations.co.za">Book a Demo</Button>
               <Button href="#dashboard" variant="secondary">View the OS</Button>
             </div>
-            <div className="mt-10 grid grid-cols-3 gap-4 border-t border-white/10 pt-7">
-              {[
-                ["99.9%", "workflow uptime"],
-                ["24/7", "automation layer"],
-                ["Future", "business modules"]
-              ].map(([value, label]) => (
-                <div key={label}>
-                  <div className="font-heading text-2xl font-semibold text-chartreuse">{value}</div>
-                  <div className="mt-1 text-xs uppercase tracking-[0.24em] text-white/42">{label}</div>
+            <div className="mt-10 grid gap-3 border-t border-white/10 pt-7 text-sm uppercase tracking-[0.24em] text-white/48 sm:grid-cols-3">
+              {["Workflow automation", "Customer messaging", "Business modules"].map((label) => (
+                <div key={label} className="flex items-center gap-3">
+                  <span className="size-2 bg-chartreuse shadow-[0_0_18px_rgba(224,255,79,0.8)]" />
+                  {label}
                 </div>
               ))}
             </div>
@@ -113,13 +109,13 @@ export default function Home() {
             </div>
             <div className="grid gap-5 sm:grid-cols-3">
               {[
-                ["42k", "messages orchestrated"],
-                ["31%", "booking recovery lift"],
-                ["9", "industry templates"]
-              ].map(([value, label]) => (
-                <div key={label} className="rounded-3xl border border-white/10 bg-white/[0.035] p-5">
-                  <strong className="font-heading text-3xl text-chartreuse">{value}</strong>
-                  <p className="mt-2 text-sm text-white/52">{label}</p>
+                ["Message flows", "Automated confirmations, reminders, and follow-ups."],
+                ["Booking recovery", "Structured workflows for missed requests and no-shows."],
+                ["Industry modules", "A platform foundation that can expand over time."]
+              ].map(([title, body]) => (
+                <div key={title} className="rounded-3xl border border-white/10 bg-white/[0.035] p-5">
+                  <strong className="font-heading text-xl text-chartreuse">{title}</strong>
+                  <p className="mt-2 text-sm leading-6 text-white/52">{body}</p>
                 </div>
               ))}
             </div>
