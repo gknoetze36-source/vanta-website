@@ -4,12 +4,6 @@ import { motion } from "framer-motion";
 import { Activity, CalendarCheck, MessageSquare, Workflow } from "lucide-react";
 import { VantaLogo } from "./vanta-logo";
 
-const rows = [
-  ["Customer request", "Booking", "Confirmed"],
-  ["Follow-up", "Reminder", "Queued"],
-  ["Workflow task", "Message", "Sent"]
-];
-
 const modules = [
   ["Bookings", "Capture", CalendarCheck],
   ["Messages", "Automate", MessageSquare],
@@ -72,7 +66,7 @@ export function DashboardPreview() {
             ))}
           </div>
 
-          <div className="grid gap-5 xl:grid-cols-[1.1fr_0.9fr]">
+          <div className="grid gap-5">
             <div className="rounded-3xl border border-white/10 bg-white/[0.035] p-5">
               <div className="mb-6 flex items-center justify-between">
                 <span className="text-sm text-white/60">Workflow graph</span>
@@ -91,21 +85,6 @@ export function DashboardPreview() {
                     <span className="mb-2 size-2 bg-chartreuse" />
                     {node}
                   </motion.div>
-                ))}
-              </div>
-            </div>
-
-            <div className="rounded-3xl border border-white/10 bg-white/[0.035] p-5">
-              <div className="mb-4 text-sm text-white/60">Booking stream</div>
-              <div className="space-y-3">
-                {rows.map((row) => (
-                  <div key={row.join("-")} className="grid grid-cols-[1fr_auto] gap-3 rounded-2xl border border-white/10 bg-white/[0.035] p-3 text-sm">
-                    <div>
-                      <div>{row[0]}</div>
-                      <div className="text-white/45">{row[1]} / {row[2]}</div>
-                    </div>
-                    <div className="text-chartreuse">Ready</div>
-                  </div>
                 ))}
               </div>
             </div>
