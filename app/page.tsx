@@ -4,6 +4,7 @@ import { DashboardPreview } from "@/components/dashboard-preview";
 import { FeatureCard } from "@/components/feature-card";
 import { Footer } from "@/components/footer";
 import { MotionSection } from "@/components/motion-section";
+import { OfferTabs } from "@/components/offer-tabs";
 import { Navbar } from "@/components/navbar";
 import { PixelParticles } from "@/components/pixel-particles";
 
@@ -40,10 +41,8 @@ const features = [
   }
 ] as const;
 
-const logos = ["NOVA Clinics", "Apex Motors", "Luma Studio", "Orbit Dental", "Northline Hotels"];
-
 const industries = [
-  ["Workshops", "Bookings, service reminders, repair updates, missed-call recovery, and branch-level performance."],
+  ["Workshops", "Bookings, service reminders, repair updates, missed-call recovery, and workflow performance."],
   ["Clinics", "Appointment confirmations, follow-up reminders, no-show recovery, and consent-aware messaging."],
   ["Salons", "Rebooking flows, waitlist recovery, stylist schedules, campaign nudges, and client reminders."],
   ["Hotels", "Guest requests, stay reminders, upsell workflows, service routing, and feedback collection."],
@@ -60,7 +59,7 @@ const process = [
 const faqs = [
   ["Is VANTA only for workshops?", "No. The workshop system is the first operating model, but VANTA is structured as a reusable automation platform for multiple service industries."],
   ["Does this replace my current tools?", "It can sit above existing booking, messaging, and payment tools first, then consolidate more workflow logic over time."],
-  ["Can it support more than one branch?", "Yes. The platform is designed around tenant-safe data, branch routing, usage tracking, and reusable industry templates."],
+  ["Can it support multiple locations?", "Yes. The platform is designed around controlled data, location routing, usage tracking, and reusable industry templates."],
   ["What happens after launch?", "You get a monitored automation layer with workflow logs, retry handling, message tracking, and monthly improvement targets."]
 ];
 
@@ -71,6 +70,7 @@ export default function Home() {
 
       <section className="relative overflow-hidden pb-24 pt-36 md:pb-32 md:pt-44">
         <PixelParticles />
+        <div className="pixel-floor absolute bottom-0 left-0 right-0 h-24 opacity-30" />
         <div className="container-shell relative z-10 grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
             <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-chartreuse/20 bg-chartreuse/[0.06] px-4 py-2 text-sm text-chartreuse">
@@ -78,20 +78,20 @@ export default function Home() {
               Automation infrastructure for service businesses
             </div>
             <h1 className="text-balance font-heading text-5xl font-semibold tracking-[-0.06em] sm:text-6xl lg:text-7xl">
-              Automate. Communicate. Grow.
+              Automate. Communicate. <span className="text-chartreuse">Grow.</span>
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-white/62">
-              VANTA Automations centralizes bookings, WhatsApp workflows, reminders, billing, analytics, and operational recovery into one premium multi-tenant SaaS platform.
+              VANTA Automations streamlines business workflows, automates customer communication, and gives service teams a cleaner operating system for daily growth.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Button href="#cta">Start with VANTA</Button>
+              <Button href="mailto:hello@vantaautomations.co.za">Book a Demo</Button>
               <Button href="#dashboard" variant="secondary">View the OS</Button>
             </div>
             <div className="mt-10 grid grid-cols-3 gap-4 border-t border-white/10 pt-7">
               {[
-                ["38+", "branch-ready"],
                 ["99.9%", "workflow uptime"],
-                ["24/7", "automation layer"]
+                ["24/7", "automation layer"],
+                ["Future", "business modules"]
               ].map(([value, label]) => (
                 <div key={label}>
                   <div className="font-heading text-2xl font-semibold text-chartreuse">{value}</div>
@@ -125,14 +125,29 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="mt-8 grid gap-3 text-sm text-white/42 sm:grid-cols-5">
-            {logos.map((logo) => (
-              <div key={logo} className="rounded-2xl border border-white/10 bg-white/[0.025] px-4 py-4 text-center">
-                {logo}
+          <div className="mt-8 grid gap-3 text-sm text-white/48 sm:grid-cols-4">
+            {["Service teams", "Growing operators", "Customer-led businesses", "Future-ready workflows"].map((label) => (
+              <div key={label} className="border border-white/10 bg-white/[0.025] px-4 py-4 text-center">
+                {label}
               </div>
             ))}
           </div>
         </div>
+      </MotionSection>
+
+      <MotionSection id="solutions" className="container-shell py-20">
+        <div className="mb-12 grid gap-8 lg:grid-cols-[0.7fr_1fr] lg:items-end">
+          <div>
+            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-chartreuse/80">What we offer</p>
+            <h2 className="font-heading text-4xl font-semibold tracking-[-0.04em] md:text-5xl">
+              Start with bookings. Expand into a full business automation layer.
+            </h2>
+          </div>
+          <p className="text-lg leading-8 text-white/58">
+            The booking system is the beginning. VANTA is structured so new business modules can be added as the platform grows.
+          </p>
+        </div>
+        <OfferTabs />
       </MotionSection>
 
       <MotionSection id="platform" className="container-shell py-20">
@@ -183,7 +198,7 @@ export default function Home() {
             </h2>
           </div>
           <p className="text-lg leading-8 text-white/58">
-            Monitor bookings, tenants, automation jobs, billing usage, failed messages, and growth signals from a calm dark-mode command center.
+            Monitor bookings, automation jobs, message activity, failed workflows, and growth signals from a calm dark-mode command center.
           </p>
         </div>
         <DashboardPreview />
@@ -228,17 +243,25 @@ export default function Home() {
       </MotionSection>
 
       <MotionSection id="pricing" className="container-shell py-20">
+        <div className="mb-10 max-w-3xl">
+          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-chartreuse/80">Plans</p>
+          <h2 className="font-heading text-4xl font-semibold tracking-[-0.04em] md:text-5xl">
+            Choose the level of automation your business is ready for.
+          </h2>
+        </div>
         <div className="grid gap-4 md:grid-cols-3">
           {[
-            ["Essential", "For small teams starting with bookings and simple reminders.", "R499+"],
-            ["Growth", "For multi-location businesses ready for workflow automation.", "R1,500+"],
-            ["Advanced Automation", "For high-volume operators that need custom automations and priority support.", "R5,000+"]
-          ].map(([name, body, price]) => (
-            <div key={name} className="rounded-[2rem] border border-white/10 bg-white/[0.035] p-7">
+            ["Essential", "For small teams that need automated bookings, reminders, and cleaner customer communication."],
+            ["Growth", "For growing businesses ready to connect communication, workflow routing, and operational recovery."],
+            ["Advanced Automation", "For operators that need tailored automations, deeper reporting, priority setup, and future modules."]
+          ].map(([name, body]) => (
+            <div key={name} className="pixel-corner border border-white/10 bg-white/[0.035] p-7">
               <h3 className="font-heading text-2xl font-semibold">{name}</h3>
-              <p className="mt-4 min-h-20 leading-7 text-white/56">{body}</p>
-              <div className="mt-8 font-heading text-4xl font-semibold text-chartreuse">{price}</div>
-              <p className="mt-2 text-sm text-white/42">base subscription + usage scaling</p>
+              <p className="mt-4 min-h-28 leading-7 text-white/56">{body}</p>
+              <div className="mt-8 flex items-center gap-2 text-sm uppercase tracking-[0.26em] text-chartreuse">
+                <span className="size-2 bg-chartreuse" />
+                Custom setup
+              </div>
             </div>
           ))}
         </div>
@@ -270,10 +293,10 @@ export default function Home() {
               Build the business that keeps working after closing time.
             </h2>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/58">
-              Launch one reusable automation platform for bookings, reminders, messaging, billing, and industry-specific workflows.
+              Launch one reusable automation platform for bookings, reminders, messaging, workflow routing, and future business modules.
             </p>
             <div className="mt-9 flex justify-center">
-              <Button href="mailto:hello@vantaautomations.com">Book a Strategy Call</Button>
+              <Button href="mailto:hello@vantaautomations.co.za">Book a Demo</Button>
             </div>
           </div>
         </div>

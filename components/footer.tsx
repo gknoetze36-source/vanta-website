@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { VantaLogo } from "./vanta-logo";
 
 export function Footer() {
   return (
@@ -20,16 +21,18 @@ export function Footer() {
       </div>
       <div className="container-shell relative z-10 grid gap-10 py-16 md:grid-cols-[1fr_auto]">
         <div>
-          <div className="mb-4 font-heading text-2xl font-semibold">VANTA Automations</div>
+          <div className="mb-4">
+            <VantaLogo />
+          </div>
           <p className="max-w-xl text-white/58">
             Intelligent automation infrastructure for service businesses that want cleaner operations, faster communication, and measurable growth.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-8 text-sm text-white/56 sm:grid-cols-4">
           {[
-            ["Platform", "#platform"],
-            ["Industries", "#industries"],
-            ["Pricing", "#pricing"],
+            ["Solutions", "#solutions"],
+            ["Features", "#platform"],
+            ["Plans", "#pricing"],
             ["Contact", "#cta"]
           ].map(([item, href]) => (
             <Link key={item} href={href} className="transition hover:text-chartreuse">

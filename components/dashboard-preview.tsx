@@ -2,11 +2,12 @@
 
 import { motion } from "framer-motion";
 import { Activity, CalendarCheck, MessageSquare, Workflow } from "lucide-react";
+import { VantaLogo } from "./vanta-logo";
 
 const rows = [
-  ["Riverside Motors", "Service", "WhatsApp sent", "09:30"],
-  ["Luma Salon", "Booking", "Confirmed", "10:15"],
-  ["North Dental", "Reminder", "Queued", "11:00"]
+  ["Customer request", "Booking", "Confirmed", "09:30"],
+  ["Follow-up", "Reminder", "Queued", "10:15"],
+  ["Workflow task", "Message", "Sent", "11:00"]
 ];
 
 export function DashboardPreview() {
@@ -19,11 +20,15 @@ export function DashboardPreview() {
       className="glass pixel-corner relative overflow-hidden rounded-[2rem] p-4"
     >
       <div className="absolute right-12 top-10 h-24 w-24 bg-chartreuse/20 blur-3xl" />
+      <div className="absolute bottom-6 left-6 grid grid-cols-8 gap-1 opacity-30">
+        {Array.from({ length: 32 }).map((_, index) => (
+          <span key={index} className={`size-1 ${index % 4 === 0 ? "bg-chartreuse" : "bg-white/20"}`} />
+        ))}
+      </div>
       <div className="grid min-h-[520px] grid-cols-1 overflow-hidden rounded-[1.5rem] border border-white/10 bg-[#00191d]/80 lg:grid-cols-[210px_1fr]">
         <aside className="hidden border-r border-white/10 bg-white/[0.03] p-5 lg:block">
-          <div className="mb-8 flex items-center gap-3">
-            <div className="size-3 bg-chartreuse" />
-            <span className="font-heading text-sm">Command OS</span>
+          <div className="mb-8">
+            <VantaLogo compact />
           </div>
           {["Overview", "Bookings", "Workflows", "Messaging", "Usage"].map((item, index) => (
             <div
@@ -38,7 +43,7 @@ export function DashboardPreview() {
         <main className="p-5 sm:p-7">
           <div className="mb-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
             <div>
-              <p className="mb-2 text-xs uppercase tracking-[0.3em] text-chartreuse/80">Live tenant grid</p>
+              <p className="mb-2 text-xs uppercase tracking-[0.3em] text-chartreuse/80">Automation dashboard</p>
               <h3 className="font-heading text-2xl font-semibold">Automation Control</h3>
             </div>
             <div className="h-2 w-32 overflow-hidden rounded-full bg-white/10">

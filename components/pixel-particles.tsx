@@ -2,12 +2,12 @@
 
 import { motion } from "framer-motion";
 
-const particles = Array.from({ length: 28 }, (_, index) => ({
+const particles = Array.from({ length: 58 }, (_, index) => ({
   id: index,
-  left: `${8 + ((index * 31) % 84)}%`,
-  top: `${10 + ((index * 17) % 74)}%`,
+  left: `${4 + ((index * 31) % 92)}%`,
+  top: `${7 + ((index * 17) % 84)}%`,
   delay: (index % 7) * 0.35,
-  size: index % 5 === 0 ? 6 : 4
+  size: index % 9 === 0 ? 7 : index % 4 === 0 ? 5 : 3
 }));
 
 export function PixelParticles() {
@@ -24,8 +24,9 @@ export function PixelParticles() {
             height: particle.size
           }}
           animate={{
-            opacity: [0.08, 0.55, 0.12],
-            y: [0, -18, 0],
+            opacity: [0.06, 0.58, 0.1],
+            y: [0, -22, 0],
+            x: [0, particle.id % 2 ? 8 : -8, 0],
             scale: [1, 1.4, 1]
           }}
           transition={{
