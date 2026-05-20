@@ -37,7 +37,7 @@ const features = [
   {
     icon: "workflow",
     title: "Business automations",
-    description: "Reusable templates for workshops, salons, clinics, dentists, hotels, gyms, consultants, and repair teams."
+    description: "Reusable templates for workshops, salons, clinics, dentists, hotels, consultants, and repair teams."
   }
 ] as const;
 
@@ -46,7 +46,6 @@ const industries = [
   ["Clinics", "Appointment confirmations, follow-up reminders, no-show recovery, and consent-aware messaging."],
   ["Salons", "Rebooking flows, waitlist recovery, stylist schedules, campaign nudges, and client reminders."],
   ["Hotels", "Guest requests, stay reminders, upsell workflows, service routing, and feedback collection."],
-  ["Gyms", "Trial bookings, membership reminders, renewal recovery, class updates, and lead follow-up."],
   ["Consultants", "Lead qualification, calendar routing, proposal reminders, payment nudges, and pipeline visibility."]
 ];
 
