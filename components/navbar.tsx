@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "./button";
 
-const links = ["Platform", "Automations", "Dashboard", "Pricing"];
+const links = ["Platform", "Industries", "Automations", "Pricing"];
 
 export function Navbar() {
   return (

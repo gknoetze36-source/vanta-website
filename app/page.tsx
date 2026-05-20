@@ -1,4 +1,3 @@
-import { BarChart3, BellRing, Bot, CalendarCheck, MessageSquare, Workflow } from "lucide-react";
 import { AutomationFlow } from "@/components/automation-flow";
 import { Button } from "@/components/button";
 import { DashboardPreview } from "@/components/dashboard-preview";
@@ -10,38 +9,60 @@ import { PixelParticles } from "@/components/pixel-particles";
 
 const features = [
   {
-    icon: CalendarCheck,
+    icon: "calendar",
     title: "Automated bookings",
     description: "Convert public inquiries into structured bookings with tenant-safe routing, service logic, and follow-up recovery."
   },
   {
-    icon: MessageSquare,
+    icon: "message",
     title: "WhatsApp messaging",
     description: "Send confirmations, reminders, missed-booking follow-ups, and payment nudges through channel-aware messaging."
   },
   {
-    icon: Bot,
+    icon: "bot",
     title: "AI workflows",
     description: "Use AI where it creates leverage, while fixed rules, prices, limits, and workflows keep operations predictable."
   },
   {
-    icon: BellRing,
+    icon: "bell",
     title: "Customer reminders",
     description: "Industry-specific schedules for service reminders, checkups, appointments, recovery, and recurring work."
   },
   {
-    icon: BarChart3,
+    icon: "chart",
     title: "Analytics",
     description: "Track bookings, usage, recovery rates, message spend, automation performance, and tenant ROI."
   },
   {
-    icon: Workflow,
+    icon: "workflow",
     title: "Business automations",
     description: "Reusable templates for workshops, salons, clinics, dentists, hotels, gyms, consultants, and repair teams."
   }
-];
+] as const;
 
 const logos = ["NOVA Clinics", "Apex Motors", "Luma Studio", "Orbit Dental", "Northline Hotels"];
+
+const industries = [
+  ["Workshops", "Bookings, service reminders, repair updates, missed-call recovery, and branch-level performance."],
+  ["Clinics", "Appointment confirmations, follow-up reminders, no-show recovery, and consent-aware messaging."],
+  ["Salons", "Rebooking flows, waitlist recovery, stylist schedules, campaign nudges, and client reminders."],
+  ["Hotels", "Guest requests, stay reminders, upsell workflows, service routing, and feedback collection."],
+  ["Gyms", "Trial bookings, membership reminders, renewal recovery, class updates, and lead follow-up."],
+  ["Consultants", "Lead qualification, calendar routing, proposal reminders, payment nudges, and pipeline visibility."]
+];
+
+const process = [
+  ["Map", "Document the booking, reminder, message, and billing flows that create daily friction."],
+  ["Configure", "Set tenant rules, templates, timing windows, escalation paths, and usage limits."],
+  ["Launch", "Deploy the workflows, monitor every job, and refine the highest-value recovery loops."]
+];
+
+const faqs = [
+  ["Is VANTA only for workshops?", "No. The workshop system is the first operating model, but VANTA is structured as a reusable automation platform for multiple service industries."],
+  ["Does this replace my current tools?", "It can sit above existing booking, messaging, and payment tools first, then consolidate more workflow logic over time."],
+  ["Can it support more than one branch?", "Yes. The platform is designed around tenant-safe data, branch routing, usage tracking, and reusable industry templates."],
+  ["What happens after launch?", "You get a monitored automation layer with workflow logs, retry handling, message tracking, and monthly improvement targets."]
+];
 
 export default function Home() {
   return (
@@ -128,6 +149,31 @@ export default function Home() {
         </div>
       </MotionSection>
 
+      <MotionSection id="industries" className="container-shell py-20">
+        <div className="mb-12 grid gap-8 lg:grid-cols-[0.72fr_1fr] lg:items-end">
+          <div>
+            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-chartreuse/80">Industries</p>
+            <h2 className="font-heading text-4xl font-semibold tracking-[-0.04em] md:text-5xl">
+              Launch from proven templates, then tune the workflow to the business.
+            </h2>
+          </div>
+          <p className="text-lg leading-8 text-white/58">
+            VANTA keeps the operating core consistent while changing the rules, timing, language, and metrics around each industry.
+          </p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {industries.map(([name, body]) => (
+            <div key={name} className="border border-white/10 bg-white/[0.035] p-6">
+              <div className="mb-5 flex items-center gap-3">
+                <span className="size-2 bg-chartreuse shadow-[0_0_18px_rgba(224,255,79,0.7)]" />
+                <h3 className="font-heading text-xl font-semibold">{name}</h3>
+              </div>
+              <p className="leading-7 text-white/56">{body}</p>
+            </div>
+          ))}
+        </div>
+      </MotionSection>
+
       <MotionSection id="dashboard" className="container-shell py-20">
         <div className="mb-10 grid gap-8 lg:grid-cols-[0.7fr_1fr] lg:items-end">
           <div>
@@ -156,6 +202,31 @@ export default function Home() {
         <AutomationFlow />
       </MotionSection>
 
+      <MotionSection className="container-shell py-20">
+        <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+          <div>
+            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-chartreuse/80">Implementation</p>
+            <h2 className="font-heading text-4xl font-semibold tracking-[-0.04em] md:text-5xl">
+              A clean path from manual operations to monitored automation.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-white/58">
+              Start with the workflows that leak revenue or time first, then expand into a reusable operating layer.
+            </p>
+          </div>
+          <div className="grid gap-4">
+            {process.map(([title, body], index) => (
+              <div key={title} className="grid gap-4 border border-white/10 bg-white/[0.035] p-6 sm:grid-cols-[72px_1fr]">
+                <div className="font-heading text-4xl font-semibold text-chartreuse">{String(index + 1).padStart(2, "0")}</div>
+                <div>
+                  <h3 className="font-heading text-2xl font-semibold">{title}</h3>
+                  <p className="mt-2 leading-7 text-white/56">{body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </MotionSection>
+
       <MotionSection id="pricing" className="container-shell py-20">
         <div className="grid gap-4 md:grid-cols-3">
           {[
@@ -168,6 +239,23 @@ export default function Home() {
               <p className="mt-4 min-h-20 leading-7 text-white/56">{body}</p>
               <div className="mt-8 font-heading text-4xl font-semibold text-chartreuse">{price}</div>
               <p className="mt-2 text-sm text-white/42">base subscription + usage scaling</p>
+            </div>
+          ))}
+        </div>
+      </MotionSection>
+
+      <MotionSection className="container-shell py-20">
+        <div className="mb-10 max-w-3xl">
+          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-chartreuse/80">Questions</p>
+          <h2 className="font-heading text-4xl font-semibold tracking-[-0.04em] md:text-5xl">
+            Built for practical rollout, not a vague automation promise.
+          </h2>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          {faqs.map(([question, answer]) => (
+            <div key={question} className="border border-white/10 bg-white/[0.035] p-6">
+              <h3 className="font-heading text-xl font-semibold">{question}</h3>
+              <p className="mt-3 leading-7 text-white/56">{answer}</p>
             </div>
           ))}
         </div>

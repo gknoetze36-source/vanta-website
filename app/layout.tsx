@@ -15,9 +15,18 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://gknoetze36-source.github.io/vanta-website"),
   title: "VANTA Automations | Intelligent business automation infrastructure",
   description:
-    "Premium automation infrastructure for bookings, WhatsApp workflows, reminders, analytics, and customer communication across service businesses."
+    "Premium automation infrastructure for bookings, WhatsApp workflows, reminders, analytics, and customer communication across service businesses.",
+  openGraph: {
+    title: "VANTA Automations",
+    description:
+      "Automation infrastructure for service businesses that need cleaner bookings, faster communication, and measurable recovery.",
+    url: "https://gknoetze36-source.github.io/vanta-website",
+    siteName: "VANTA Automations",
+    type: "website"
+  }
 };
 
 export default function RootLayout({

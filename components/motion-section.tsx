@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import type { ComponentPropsWithoutRef, ReactNode } from "react";
+import type { HTMLMotionProps } from "framer-motion";
+import type { ReactNode } from "react";
 
 export function MotionSection({
   children,
@@ -12,7 +13,7 @@ export function MotionSection({
   children: ReactNode;
   className?: string;
   delay?: number;
-} & ComponentPropsWithoutRef<"section">) {
+} & HTMLMotionProps<"section">) {
   return (
     <motion.section
       {...props}

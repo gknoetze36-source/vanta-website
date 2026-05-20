@@ -26,8 +26,13 @@ export function Footer() {
           </p>
         </div>
         <div className="grid grid-cols-2 gap-8 text-sm text-white/56 sm:grid-cols-4">
-          {["Platform", "Automations", "Pricing", "Contact"].map((item) => (
-            <Link key={item} href="#" className="transition hover:text-chartreuse">
+          {[
+            ["Platform", "#platform"],
+            ["Industries", "#industries"],
+            ["Pricing", "#pricing"],
+            ["Contact", "#cta"]
+          ].map(([item, href]) => (
+            <Link key={item} href={href} className="transition hover:text-chartreuse">
               {item}
             </Link>
           ))}

@@ -1,19 +1,30 @@
 "use client";
 
 import { motion } from "framer-motion";
-import type { LucideIcon } from "lucide-react";
+import { BarChart3, BellRing, Bot, CalendarCheck, MessageSquare, Workflow } from "lucide-react";
+
+const icons = {
+  calendar: CalendarCheck,
+  message: MessageSquare,
+  bot: Bot,
+  bell: BellRing,
+  chart: BarChart3,
+  workflow: Workflow
+};
 
 export function FeatureCard({
-  icon: Icon,
+  icon,
   title,
   description,
   index
 }: {
-  icon: LucideIcon;
+  icon: keyof typeof icons;
   title: string;
   description: string;
   index: number;
 }) {
+  const Icon = icons[icon];
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 22 }}
