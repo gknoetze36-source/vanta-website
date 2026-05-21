@@ -8,9 +8,7 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true
-  },
-  basePath: isGithubPages ? "/vanta-website" : undefined,
-  assetPrefix: isGithubPages ? "/vanta-website/" : undefined
+  }
 };
 
 export default nextConfig;
