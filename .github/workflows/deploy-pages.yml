@@ -33,9 +33,7 @@ jobs:
         run: npm ci
 
       - name: Build static site
-        run: |
-          npm run build
-          npx next export
+        run: npm run build
         env:
           GITHUB_PAGES: "true"
 
@@ -56,4 +54,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
