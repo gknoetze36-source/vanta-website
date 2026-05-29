@@ -27,13 +27,16 @@ export function Footer() {
           <p className="max-w-xl text-white/58">
             Intelligent automation infrastructure for service businesses that want cleaner operations, faster communication, and measurable growth.
           </p>
+          <a href="mailto:Hello@Vantaautomations.co.za" className="mt-4 inline-block text-sm text-chartreuse transition hover:text-white">
+            Hello@Vantaautomations.co.za
+          </a>
         </div>
         <div className="grid grid-cols-2 gap-8 text-sm text-white/56 sm:grid-cols-4">
           {[
-            ["Solutions", "#solutions"],
-            ["Features", "#platform"],
-            ["Plans", "#pricing"],
-            ["Contact", "#cta"]
+            ["About", "/about"],
+            ["Solutions", "/#solutions"],
+            ["Privacy", "/privacy"],
+            ["Terms", "/terms"]
           ].map(([item, href]) => (
             <Link key={item} href={href} className="transition hover:text-chartreuse">
               {item}

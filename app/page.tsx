@@ -83,7 +83,7 @@ export default function Home() {
               VANTA Automations streamlines business workflows, automates customer communication, and gives service teams a cleaner operating system for daily growth.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Button href="mailto:hello@vantaautomations.co.za">Book a Demo</Button>
+              <Button href="mailto:Hello@Vantaautomations.co.za">Email VANTA</Button>
               <Button href="#dashboard" variant="secondary">View the OS</Button>
             </div>
             <div className="mt-10 grid gap-3 border-t border-white/10 pt-7 text-sm uppercase tracking-[0.24em] text-white/48 sm:grid-cols-3">
@@ -291,7 +291,7 @@ export default function Home() {
               Launch one reusable automation platform for bookings, reminders, messaging, workflow routing, and future business modules.
             </p>
             <div className="mt-9 flex justify-center">
-              <Button href="mailto:hello@vantaautomations.co.za">Book a Demo</Button>
+              <Button href="mailto:Hello@Vantaautomations.co.za">Email VANTA</Button>
             </div>
           </div>
         </div>

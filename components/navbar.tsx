@@ -3,10 +3,12 @@ import { Button } from "./button";
 import { VantaLogo } from "./vanta-logo";
 
 const links = [
-  ["Solutions", "#solutions"],
-  ["Features", "#platform"],
-  ["Automations", "#automations"],
-  ["Plans", "#pricing"]
+  ["Home", "/"],
+  ["About / Services", "/about"],
+  ["Solutions", "/#solutions"],
+  ["Plans", "/#pricing"],
+  ["Privacy", "/privacy"],
+  ["Terms", "/terms"]
 ];
 
 export function Navbar() {
@@ -15,7 +17,7 @@ export function Navbar() {
       <nav className="container-shell flex h-20 items-center justify-between">
         <VantaLogo />
 
-        <div className="hidden items-center gap-8 text-sm text-white/62 md:flex">
+        <div className="hidden items-center gap-6 text-sm text-white/62 md:flex">
           {links.map(([label, href]) => (
             <Link key={label} href={href} className="transition hover:text-chartreuse">
               {label}
@@ -24,7 +26,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden md:block">
-          <Button href="#cta">Book a Demo</Button>
+          <Button href="mailto:Hello@Vantaautomations.co.za">Email Us</Button>
         </div>
       </nav>
     </header>
