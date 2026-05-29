@@ -10,14 +10,15 @@ const sections = [
   ["1. Information We May Collect", "We may collect business contact details, names, email addresses, phone numbers, booking details, service requirements, customer communication records, account information, technical logs, and information submitted through forms or direct communication."],
   ["2. How We Use Information", "We use information to provide automation services, manage bookings, send confirmations and reminders, support customer communication, improve workflows, provide technical support, maintain security, and operate the services requested by clients."],
   ["3. Customer Communication Data", "Where WhatsApp, SMS, email, or other messaging channels are used, communication data may be processed to send booking confirmations, reminders, service updates, customer support responses, and workflow notifications."],
-  ["4. Client Responsibilities", "Clients are responsible for ensuring they have appropriate consent and lawful grounds to collect, upload, store, or send customer information through VANTA Automations systems."],
-  ["5. Third-Party Services", "Our services may rely on third-party platforms such as hosting providers, messaging providers, WhatsApp, SMS gateways, email services, analytics tools, and payment or subscription systems. These providers may process data according to their own policies and service terms."],
-  ["6. Data Security", "We take reasonable technical and organizational steps to protect information against unauthorized access, loss, misuse, or disclosure. No digital system can be guaranteed to be completely secure."],
-  ["7. Data Retention", "Information is retained for as long as needed to provide services, meet legal or operational requirements, resolve disputes, maintain business records, or support active client accounts."],
-  ["8. Access, Correction, and Deletion", "Clients or users may request access to, correction of, or deletion of personal information where applicable under South African law and where retention is not required for legitimate business, security, or legal reasons."],
-  ["9. Children", "VANTA Automations services are intended for businesses and are not directed at children."],
-  ["10. Updates to This Policy", "We may update this Privacy Policy from time to time to reflect service, legal, or operational changes."],
-  ["11. Contact", "Privacy-related questions can be sent to Hello@Vantaautomations.co.za."]
+  ["4. Messaging Consent", "Where SMS, WhatsApp, or similar messaging is used, recipients must opt in before receiving automated messages. Messages may include booking confirmations, appointment reminders, service updates, support responses, and workflow notifications. Message frequency may vary based on bookings, customer requests, and service activity. Message and data rates may apply. Recipients can opt out of SMS messages by replying STOP and can request help by replying HELP or contacting Hello@Vantaautomations.co.za. Mobile numbers collected for messaging are not sold, rented, or shared with third parties for their own marketing purposes."],
+  ["5. Client Responsibilities", "Clients are responsible for ensuring they have appropriate consent and lawful grounds to collect, upload, store, or send customer information through VANTA Automations systems."],
+  ["6. Third-Party Services", "Our services may rely on third-party platforms such as hosting providers, messaging providers, WhatsApp, SMS gateways, email services, analytics tools, and payment or subscription systems. These providers may process data according to their own policies and service terms."],
+  ["7. Data Security", "We take reasonable technical and organizational steps to protect information against unauthorized access, loss, misuse, or disclosure. No digital system can be guaranteed to be completely secure."],
+  ["8. Data Retention", "Information is retained for as long as needed to provide services, meet legal or operational requirements, resolve disputes, maintain business records, or support active client accounts."],
+  ["9. Access, Correction, and Deletion", "Clients or users may request access to, correction of, or deletion of personal information where applicable under South African law and where retention is not required for legitimate business, security, or legal reasons."],
+  ["10. Children", "VANTA Automations services are intended for businesses and are not directed at children."],
+  ["11. Updates to This Policy", "We may update this Privacy Policy from time to time to reflect service, legal, or operational changes."],
+  ["12. Contact", "Privacy-related questions can be sent to Hello@Vantaautomations.co.za."]
 ];
 
 export default function PrivacyPage() {
