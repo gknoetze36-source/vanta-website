@@ -56,12 +56,12 @@ export function DashboardPreview() {
             </div>
           </div>
 
-          <div className="mb-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="mb-5 grid grid-cols-2 gap-3">
             {modules.map(([label, action, Icon]) => (
               <div key={label as string} className="rounded-3xl border border-white/10 bg-white/[0.04] p-4">
                 <Icon className="mb-5 size-5 text-chartreuse" />
-                <p className="text-sm text-white/50">{label as string}</p>
-                <strong className="font-heading text-xl">{action as string}</strong>
+                <p className="text-sm text-white/50 truncate">{label as string}</p>
+                <strong className="font-heading text-xl block truncate">{action as string}</strong>
               </div>
             ))}
           </div>
@@ -79,7 +79,7 @@ export function DashboardPreview() {
                     key={node}
                     animate={{ y: [0, -6, 0] }}
                     transition={{ duration: 3 + index * 0.3, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute grid place-items-center rounded-2xl border border-chartreuse/20 bg-gunmetal/90 px-4 py-3 text-xs shadow-glow"
+                    className="absolute grid place-items-center rounded-2xl border border-chartreuse/20 bg-gunmetal/90 px-4 py-3 text-xs shadow-glow whitespace-nowrap"
                     style={{ left: `${index * 25 + 4}%`, top: `${index % 2 ? 52 : 20}%` }}
                   >
                     <span className="mb-2 size-2 bg-chartreuse" />
