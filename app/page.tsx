@@ -3,6 +3,7 @@ import { Button } from "@/components/button";
 import { DashboardPreview } from "@/components/dashboard-preview";
 import { FeatureCard } from "@/components/feature-card";
 import { Footer } from "@/components/footer";
+import { FloatingGhost } from "@/components/floating-ghost";
 import { MotionSection } from "@/components/motion-section";
 import { OfferTabs } from "@/components/offer-tabs";
 import { Navbar } from "@/components/navbar";
@@ -70,6 +71,7 @@ export default function Home() {
       <section className="relative overflow-hidden pb-24 pt-36 md:pb-32 md:pt-44">
         <PixelParticles />
         <div className="pixel-floor absolute bottom-0 left-0 right-0 h-24 opacity-30" />
+        <FloatingGhost size={80} className="absolute right-6 top-28 hidden lg:block z-10" />
         <div className="container-shell relative z-10 grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
             <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-chartreuse/20 bg-chartreuse/[0.06] px-4 py-2 text-sm text-chartreuse">
