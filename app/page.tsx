@@ -12,42 +12,43 @@ import { PixelParticles } from "@/components/pixel-particles";
 const features = [
   {
     icon: "calendar",
-    title: "Automated bookings",
-    description: "Convert public inquiries into structured bookings with tenant-safe routing, service logic, and follow-up recovery."
-  },
-  {
-    icon: "message",
-    title: "WhatsApp messaging",
-    description: "Send confirmations, reminders, missed-booking follow-ups, and payment nudges through channel-aware messaging."
+    title: "Online booking system",
+    description: "Let customers book services online, with availability, service selection, and confirmations handled automatically."
   },
   {
     icon: "bot",
-    title: "AI workflows",
-    description: "Use AI where it creates leverage, while fixed rules, prices, limits, and workflows keep operations predictable."
+    title: "AI-powered receptionist",
+    description: "Answer common customer questions, capture booking details, and qualify leads without a human on the phone."
+  },
+  {
+    icon: "message",
+    title: "WhatsApp communication",
+    description: "Send confirmations, reminders, and updates through the channel customers actually check."
   },
   {
     icon: "bell",
-    title: "Customer reminders",
-    description: "Industry-specific schedules for service reminders, checkups, appointments, recovery, and recurring work."
+    title: "Service reminders",
+    description: "Automated reminders based on each vehicle's service history, so nothing falls through the cracks."
   },
   {
     icon: "chart",
-    title: "Analytics",
-    description: "Track bookings, usage, recovery rates, message spend, automation performance, and tenant ROI."
+    title: "Customer & vehicle management",
+    description: "Complete customer records with full vehicle service history in one place."
   },
   {
     icon: "workflow",
-    title: "Business automations",
-    description: "Reusable templates for workshops, salons, clinics, dentists, hotels, consultants, and repair teams."
+    title: "Quotation & job management",
+    description: "Create quotes, track jobs, and manage work from intake to completion."
   }
 ] as const;
 
-const industries = [
-  ["Workshops", "Bookings, service reminders, repair updates, missed-call recovery, and workflow performance."],
-  ["Clinics", "Appointment confirmations, follow-up reminders, no-show recovery, and consent-aware messaging."],
-  ["Salons", "Rebooking flows, waitlist recovery, stylist schedules, campaign nudges, and client reminders."],
-  ["Hotels", "Guest requests, stay reminders, upsell workflows, service routing, and feedback collection."],
-  ["Consultants", "Lead qualification, calendar routing, proposal reminders, payment nudges, and pipeline visibility."]
+const platformCapabilities = [
+  ["Lead capture & follow-up", "Automatically capture new leads and follow up before they go cold."],
+  ["Multi-branch & franchise support", "Run multiple locations or franchise operations from one connected system."],
+  ["Team & user management", "Control who has access to what, across every branch and role."],
+  ["Business analytics & reporting", "See bookings, jobs, and performance clearly, without digging through spreadsheets."],
+  ["Secure cloud storage", "Business and customer data stored securely, accessible from anywhere."],
+  ["Billing & subscription management", "Manage billing and subscriptions for your business without manual admin."]
 ];
 
 const process = [
@@ -57,10 +58,10 @@ const process = [
 ];
 
 const faqs = [
-  ["Is VANTA only for workshops?", "No. The workshop system is the first operating model, but VANTA is structured as a reusable automation platform for multiple service industries."],
+  ["Who is VANTA built for?", "VANTA is built for automotive workshops and service businesses that want to reduce admin and automate day-to-day operations."],
   ["Does this replace my current tools?", "It can sit above existing booking, messaging, and payment tools first, then consolidate more workflow logic over time."],
-  ["Can it support multiple locations?", "Yes. The platform is designed around controlled data, location routing, usage tracking, and reusable industry templates."],
-  ["What happens after launch?", "You get a monitored automation layer with workflow logs, retry handling, message tracking, and monthly improvement targets."]
+  ["Can it support multiple branches?", "Yes. Multi-branch and franchise support is built in, with team and user management across locations."],
+  ["What does the AI receptionist actually do?", "It handles common customer questions and captures booking details automatically, reducing missed calls and manual admin."]
 ];
 
 export default function Home() {
@@ -76,13 +77,13 @@ export default function Home() {
           <div>
             <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-chartreuse/20 bg-chartreuse/[0.06] px-4 py-2 text-sm text-chartreuse">
               <span className="size-2 bg-chartreuse shadow-[0_0_18px_rgba(224,255,79,0.8)]" />
-              Automation infrastructure for service businesses
+              AI-powered operating system for automotive workshops
             </div>
             <h1 className="text-balance font-heading text-5xl font-semibold tracking-[-0.06em] sm:text-6xl lg:text-7xl">
               Automate. Communicate. <span className="text-chartreuse">Grow.</span>
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-white/62">
-              VANTA Automations streamlines business workflows, automates customer communication, and gives service teams a cleaner operating system for daily growth.
+              VANTA Automations is an AI-powered operating system for automotive workshops and service businesses — automating bookings, customer communication, and daily operations so you can focus on servicing vehicles instead of managing paperwork.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button href="mailto:Hello@Vantaautomations.co.za">Email VANTA</Button>
@@ -106,28 +107,14 @@ export default function Home() {
         <div className="glass rounded-[2rem] p-6">
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
             <div>
-              <p className="text-sm uppercase tracking-[0.28em] text-chartreuse/80">Trusted operating layer</p>
-              <h2 className="mt-3 font-heading text-3xl font-semibold tracking-tight">Built for businesses that cannot afford missed communication.</h2>
+              <p className="text-sm uppercase tracking-[0.28em] text-chartreuse/80">Our mission</p>
+              <h2 className="mt-3 font-heading text-3xl font-semibold tracking-tight">
+                An all-in-one AI-powered operating system for workshops.
+              </h2>
             </div>
-            <div className="grid gap-5 sm:grid-cols-3">
-              {[
-                ["Message flows", "Automated confirmations, reminders, and follow-ups."],
-                ["Booking recovery", "Structured workflows for missed requests and no-shows."],
-                ["Industry modules", "A platform foundation that can expand over time."]
-              ].map(([title, body]) => (
-                <div key={title} className="rounded-3xl border border-white/10 bg-white/[0.035] p-5">
-                  <strong className="font-heading text-xl text-chartreuse">{title}</strong>
-                  <p className="mt-2 text-sm leading-6 text-white/52">{body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="mt-8 grid gap-3 text-sm text-white/48 sm:grid-cols-4">
-            {["Service teams", "Growing operators", "Customer-led businesses", "Future-ready workflows"].map((label) => (
-              <div key={label} className="border border-white/10 bg-white/[0.025] px-4 py-4 text-center">
-                {label}
-              </div>
-            ))}
+            <p className="text-lg leading-8 text-white/62">
+              We automate customer communication, business operations, and workflow management so workshops can focus on servicing vehicles instead of managing paperwork — reducing missed bookings, improving customer experience, and helping businesses scale efficiently.
+            </p>
           </div>
         </div>
       </MotionSection>
@@ -164,17 +151,17 @@ export default function Home() {
       <MotionSection id="industries" className="container-shell py-20">
         <div className="mb-12 grid gap-8 lg:grid-cols-[0.72fr_1fr] lg:items-end">
           <div>
-            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-chartreuse/80">Industries</p>
+            <p className="mb-4 text-sm uppercase tracking-[0.3em] text-chartreuse/80">Full platform</p>
             <h2 className="font-heading text-4xl font-semibold tracking-[-0.04em] md:text-5xl">
-              Launch from proven templates, then tune the workflow to the business.
+              Everything a growing workshop needs, in one system.
             </h2>
           </div>
           <p className="text-lg leading-8 text-white/58">
-            VANTA keeps the operating core consistent while changing the rules, timing, language, and metrics around each industry.
+            Beyond bookings and messaging, VANTA covers the operational layer workshops need to run and scale.
           </p>
         </div>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {industries.map(([name, body]) => (
+          {platformCapabilities.map(([name, body]) => (
             <div key={name} className="border border-white/10 bg-white/[0.035] p-6">
               <div className="mb-5 flex items-center gap-3">
                 <span className="size-2 bg-chartreuse shadow-[0_0_18px_rgba(224,255,79,0.7)]" />
