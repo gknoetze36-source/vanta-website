@@ -54,7 +54,7 @@ export default function Home() {
       <div className="relative flex flex-col items-center gap-1.5 px-5 pb-[84px] text-center md:pb-5">
         <p className="home-tagline font-heading text-[15px] font-medium">Automate. Communicate. Grow.</p>
         <p className="text-xs text-mute">
-          {COMPANY.name}, reg. {COMPANY.registration}, {COMPANY.address}
+          {COMPANY.name}, reg. {COMPANY.registration}
         </p>
       </div>
     </main>
