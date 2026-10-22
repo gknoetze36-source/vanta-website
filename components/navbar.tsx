@@ -5,8 +5,8 @@ import { VantaLogo } from "./vanta-logo";
 const links = [
   ["Home", "/"],
   ["About / Services", "/about"],
-  ["Solutions", "/#solutions"],
-  ["Plans", "/#pricing"],
+  ["Solutions", "/what-we-do/#solutions"],
+  ["Plans", "/what-we-do/#pricing"],
   ["Privacy", "/privacy"],
   ["Terms", "/terms"]
 ];

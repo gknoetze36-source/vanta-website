@@ -42,7 +42,7 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-8 text-sm text-white/56 sm:grid-cols-3">
           {[
             ["About", "/about"],
-            ["Solutions", "/#solutions"],
+            ["Solutions", "/what-we-do/#solutions"],
             ["Privacy", "/privacy"],
             ["Terms", "/terms"],
             ["PAIA manual", LINKS.paia],
