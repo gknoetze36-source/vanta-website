@@ -3,9 +3,9 @@ import { Button } from "@/components/button";
 import { ContentPage } from "@/components/content-page";
 
 export const metadata: Metadata = {
-  title: "About and Services | VANTA Automations",
+  title: "About and Services | Vanta Automations",
   description:
-    "Learn how VANTA Automations helps businesses reduce manual work with booking systems, WhatsApp automation, workflow management, and custom software."
+    "Learn how Vanta Automations helps businesses reduce manual work with booking systems, WhatsApp automation, workflow management, and custom software."
 };
 
 const services = [
@@ -45,7 +45,7 @@ export default function AboutPage() {
     <ContentPage
       eyebrow="About / Services"
       title="Systems that make daily operations easier."
-      intro="VANTA Automations helps businesses streamline operations through intelligent automation, booking systems, customer communication, and workflow management solutions."
+      intro="Vanta Automations helps businesses streamline operations through intelligent automation, booking systems, customer communication, and workflow management solutions."
     >
       <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
         <div>
@@ -56,7 +56,7 @@ export default function AboutPage() {
             We work with businesses that want to save time, improve organization, and scale their operations without increasing administrative overhead.
           </p>
           <div className="mt-8">
-            <Button href="mailto:Hello@Vantaautomations.co.za">Email VANTA Automations</Button>
+            <Button href="mailto:Hello@Vantaautomations.co.za">Email Vanta Automations</Button>
           </div>
         </div>
         <div className="grid gap-4">
@@ -74,7 +74,7 @@ export default function AboutPage() {
 
       <div className="mt-16 grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
         <div>
-          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-chartreuse/80">Why choose VANTA</p>
+          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-chartreuse/80">Why choose Vanta Automations</p>
           <h2 className="font-heading text-4xl font-semibold tracking-[-0.04em]">
             Less admin. Clearer communication. More time to serve customers.
           </h2>
@@ -91,7 +91,7 @@ export default function AboutPage() {
 
       <div className="glass mt-16 rounded-[2rem] p-8 md:p-10">
         <p className="max-w-4xl text-xl leading-9 text-white/72">
-          At VANTA Automations, we focus on delivering practical technology solutions that help businesses save time, improve service quality, and grow more effectively.
+          At Vanta Automations, we focus on delivering practical technology solutions that help businesses save time, improve service quality, and grow more effectively.
         </p>
       </div>
     </ContentPage>
