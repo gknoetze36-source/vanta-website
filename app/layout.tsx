@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
-import { SignalBackground } from "@/components/signal-background";
 import { GhostSupportWidget } from "@/components/ghost-support-widget";
 import "./globals.css";
 
@@ -42,7 +41,6 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable}`}
     >
       <body>
-        <SignalBackground />
         {children}
         <GhostSupportWidget />
       </body>

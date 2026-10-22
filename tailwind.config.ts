@@ -5,19 +5,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        gunmetal: "#00272B",
-        tiber: "#06392F",
         chartreuse: "#E0FF4F",
-        porcelain: "#F9FAFB"
+        paper: "#F2F5F1",
+        ink: "#00272B",
+        mute: "#4A5F5B",
+        rule: "#D5DED8"
       },
       fontFamily: {
         heading: ["var(--font-space-grotesk)", "sans-serif"],
         body: ["var(--font-inter)", "sans-serif"]
       },
-      boxShadow: {
-        glow: "0 0 50px rgba(224, 255, 79, 0.16)",
-        glass: "0 24px 80px rgba(0, 0, 0, 0.28)"
-      }
     }
   },
   plugins: []
