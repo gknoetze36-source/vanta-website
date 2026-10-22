@@ -18,15 +18,15 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://vantaautomations.co.za"),
-  title: "VANTA Automations | Intelligent business automation infrastructure",
+  title: "Vanta Automations | Intelligent business automation infrastructure",
   description:
     "Premium automation infrastructure for bookings, WhatsApp workflows, reminders, analytics, and customer communication across service businesses.",
   openGraph: {
-    title: "VANTA Automations",
+    title: "Vanta Automations",
     description:
       "Automation infrastructure for service businesses that need cleaner bookings, faster communication, and measurable recovery.",
     url: "https://vantaautomations.co.za",
-    siteName: "VANTA Automations",
+    siteName: "Vanta Automations",
     type: "website",
   },
 };

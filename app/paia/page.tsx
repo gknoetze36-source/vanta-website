@@ -3,7 +3,7 @@ import { ContentPage } from "@/components/content-page";
 import { COMPANY, LINKS } from "@/components/site-info";
 
 export const metadata: Metadata = {
-  title: "PAIA Manual | VANTA Automations",
+  title: "PAIA Manual | Vanta Automations",
   description: "PAIA manual of Vanta Automations (Pty) Ltd under section 51 of the Promotion of Access to Information Act and POPIA."
 };
 
@@ -12,7 +12,7 @@ const A = ({ href, children }: { href: string; children: React.ReactNode }) => (
 );
 
 const sections: [string, React.ReactNode][] = [
-  ["1. Purpose", <>This manual explains what records Vanta Automations (Pty) Ltd (&quot;VANTA&quot;) holds, how anyone can ask for access to them under the Promotion of Access to Information Act 2 of 2000 (PAIA), and how VANTA processes personal information under the Protection of Personal Information Act 4 of 2013 (POPIA).</>],
+  ["1. Purpose", <>This manual explains what records Vanta Automations (Pty) Ltd holds, how anyone can ask for access to them under the Promotion of Access to Information Act 2 of 2000 (PAIA), and how Vanta Automations processes personal information under the Protection of Personal Information Act 4 of 2013 (POPIA).</>],
   ["2. Contact details", (
     <ul className="grid gap-1">
       <li>Company: {COMPANY.name}</li>
@@ -40,7 +40,7 @@ const sections: [string, React.ReactNode][] = [
   ["7. Processing of personal information", (
     <div className="grid gap-2">
       <p><b>Purposes:</b> running PHANTA for clients (WhatsApp messaging, bookings, Flyer Lady posts and ads, results), billing and tax, security and audit, and meeting legal obligations.</p>
-      <p><b>Data subjects:</b> client owners and staff (name, email, phone, role, login records, billing details: cards are held by Paystack, not VANTA); clients&apos; customers (name, phone, vehicle or item serviced, bookings, service history, WhatsApp messages, whose text is cleared after 14 days); suppliers (contact and banking details).</p>
+      <p><b>Data subjects:</b> client owners and staff (name, email, phone, role, login records, billing details: cards are held by Paystack, not Vanta Automations); clients&apos; customers (name, phone, vehicle or item serviced, bookings, service history, WhatsApp messages, whose text is cleared after 14 days); suppliers (contact and banking details).</p>
       <p><b>Recipients:</b> our service providers, only as needed to run the service: Meta (WhatsApp, Facebook), Google (Google Ads), OpenAI (AI message drafts), Railway (hosting), Cloudflare (image storage), Sentry (error reports) and Paystack (payments); and authorities where the law requires.</p>
       <p><b>Cross-border transfers:</b> information is hosted and processed mainly in the United States and the European Union by these providers, under their binding data-protection terms (POPIA section 72).</p>
       <p><b>Security:</b> encrypted connections and encrypted access keys, database-enforced separation of each client&apos;s data, role-based access, login lockout and 12-character passwords, an audit log, automatic deletion schedules and a breach response plan.</p>

@@ -31,7 +31,7 @@ export function ContentPage({
           <div className="glass pixel-corner relative min-h-[260px] overflow-hidden p-6">
             <Image
               src="/images/vanta-logo-wide.png"
-              alt="VANTA Automations"
+              alt="Vanta Automations"
               fill
               priority
               sizes="(min-width: 1024px) 520px, 100vw"

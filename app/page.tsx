@@ -58,7 +58,7 @@ const process = [
 ];
 
 const faqs = [
-  ["Who is VANTA built for?", "VANTA is built for service businesses, starting with automotive workshops, that want to reduce admin and automate day-to-day operations."],
+  ["Who is Vanta Automations built for?", "Vanta Automations is built for service businesses, starting with automotive workshops, that want to reduce admin and automate day-to-day operations."],
   ["Does this replace my current tools?", "It can sit above existing booking, messaging, and payment tools first, then consolidate more workflow logic over time."],
   ["Can it support multiple branches?", "Yes. Multi-branch and franchise support is built in, with team and user management across locations."],
   ["What does the AI receptionist actually do?", "It handles common customer questions and captures booking details automatically, reducing missed calls and manual admin."]
@@ -83,10 +83,10 @@ export default function Home() {
               Automate. Communicate. <span className="text-chartreuse">Grow.</span>
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-white/62">
-              VANTA Automations is an AI-powered operating system for service businesses — automating bookings, customer communication, and daily operations so you can focus on the work instead of managing paperwork.
+              Vanta Automations is an AI-powered operating system for service businesses — automating bookings, customer communication, and daily operations so you can focus on the work instead of managing paperwork.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Button href="mailto:Hello@Vantaautomations.co.za">Email VANTA</Button>
+              <Button href="mailto:Hello@Vantaautomations.co.za">Email Vanta Automations</Button>
               <Button href="#dashboard" variant="secondary">View the OS</Button>
             </div>
             <div className="mt-10 grid gap-3 border-t border-white/10 pt-7 text-sm uppercase tracking-[0.24em] text-white/48 sm:grid-cols-3">
@@ -128,7 +128,7 @@ export default function Home() {
             </h2>
           </div>
           <p className="text-lg leading-8 text-white/58">
-            The booking system is the beginning. VANTA is structured so new business modules can be added as the platform grows.
+            The booking system is the beginning. Vanta Automations is structured so new business modules can be added as the platform grows.
           </p>
         </div>
         <OfferTabs />
@@ -157,7 +157,7 @@ export default function Home() {
             </h2>
           </div>
           <p className="text-lg leading-8 text-white/58">
-            Beyond bookings and messaging, VANTA covers the operational layer clients need to run and scale.
+            Beyond bookings and messaging, Vanta Automations covers the operational layer clients need to run and scale.
           </p>
         </div>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -195,7 +195,7 @@ export default function Home() {
             Event-driven workflows that feel invisible when everything works.
           </h2>
           <p className="mt-5 text-lg leading-8 text-white/58">
-            VANTA turns operational events into scheduled actions, routed messages, retries, logs, and measurable recovery.
+            Vanta Automations turns operational events into scheduled actions, routed messages, retries, logs, and measurable recovery.
           </p>
         </div>
         <AutomationFlow />
@@ -280,7 +280,7 @@ export default function Home() {
               Launch one reusable automation platform for bookings, reminders, messaging, workflow routing, and future business modules.
             </p>
             <div className="mt-9 flex justify-center">
-              <Button href="mailto:Hello@Vantaautomations.co.za">Email VANTA</Button>
+              <Button href="mailto:Hello@Vantaautomations.co.za">Email Vanta Automations</Button>
             </div>
           </div>
         </div>

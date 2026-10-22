@@ -9,14 +9,14 @@ type Link = [label: string, href: string];
 type Topic = { keys: string[]; intro: string; steps?: string[]; links?: Link[]; next?: string[] };
 type Msg = { role: "user" | "bot"; topic: Topic };
 
-const EMAIL: Link = ["Email VANTA", `mailto:${COMPANY.supportEmail}`];
+const EMAIL: Link = ["Email Vanta Automations", `mailto:${COMPANY.supportEmail}`];
 const LOGIN: Link = ["Log in to PHANTA", LINKS.login];
 
 // Same idea as the Ghost inside PHANTA: match the question to a topic, answer with steps, buttons and follow-ups.
 const TOPICS: Topic[] = [
   {
     keys: ["what is", "phanta", "do you do", "services", "about", "how does it work", "features"],
-    intro: "PHANTA is VANTA's system for service businesses, starting with automotive workshops. It works for you after hours:",
+    intro: "PHANTA is the Vanta Automations system for service businesses, starting with automotive workshops. It works for you after hours:",
     steps: [
       "A WhatsApp assistant that answers customers and books them in. It always says it's AI, and your team can reply themselves at any time.",
       "Your own online booking page, with new bookings showing live on your Dashboard.",
@@ -115,7 +115,7 @@ const FALLBACK: Topic = {
   next: ["What is PHANTA?", "How do I get started?", "POPIA & privacy", "PAIA manual"]
 };
 const WELCOME: Topic = {
-  intro: "Hi 👻 I'm the VANTA Ghost. Ask me about PHANTA, getting started, pricing, or POPIA and PAIA.",
+  intro: "Hi 👻 I'm the Vanta Automations Ghost. Ask me about PHANTA, getting started, pricing, or POPIA and PAIA.",
   keys: [],
   next: ["What is PHANTA?", "How do I get started?", "POPIA & privacy", "PAIA manual"]
 };
@@ -155,12 +155,12 @@ export function GhostSupportWidget() {
   return (
     <div className="fixed bottom-6 right-6 z-[60] flex flex-col items-end gap-3">
       {open && (
-        <section aria-label="VANTA Ghost assistant" className="flex max-h-[min(640px,80vh)] w-[min(360px,calc(100vw-2rem))] flex-col rounded-2xl border border-white/10 bg-[#00272B]/95 shadow-[0_0_40px_rgba(0,0,0,0.4)] backdrop-blur-xl">
+        <section aria-label="Vanta Automations Ghost assistant" className="flex max-h-[min(640px,80vh)] w-[min(360px,calc(100vw-2rem))] flex-col rounded-2xl border border-white/10 bg-[#00272B]/95 shadow-[0_0_40px_rgba(0,0,0,0.4)] backdrop-blur-xl">
           <header className="flex items-center justify-between border-b border-white/10 p-4">
             <div className="flex items-center gap-3">
               <PixelGhost size={32} glow={false} />
               <div>
-                <p className="font-heading text-sm font-semibold text-white">VANTA Ghost</p>
+                <p className="font-heading text-sm font-semibold text-white">Vanta Automations Ghost</p>
                 <p className="text-xs text-white/50">Answers straight away · people reply within a day</p>
               </div>
             </div>
