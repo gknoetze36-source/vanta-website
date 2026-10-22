@@ -31,19 +31,19 @@ const sections: [string, React.ReactNode][] = [
     <ul className="grid gap-1">
       <li><b>Company:</b> incorporation, director and shareholder records, resolutions, contracts.</li>
       <li><b>Finance:</b> bank statements, invoices, payment and tax records.</li>
-      <li><b>Workshops (customers):</b> account and contact details, subscription and billing history, accepted terms, support correspondence.</li>
-      <li><b>Workshops&apos; own customers</b> (held as Operator for the workshop): names, phone numbers, vehicles, bookings, WhatsApp messages. Requests for these go to the workshop concerned.</li>
+      <li><b>Clients (businesses using PHANTA):</b> account and contact details, subscription and billing history, accepted terms, support correspondence.</li>
+      <li><b>Clients&apos; own customers</b> (held as Operator for the client): names, phone numbers, vehicles or other items serviced, bookings, WhatsApp messages. Requests for these go to the client concerned.</li>
       <li><b>Suppliers:</b> contracts, data-processing terms, invoices.</li>
       <li><b>IT and compliance:</b> system, security and audit logs, incident register, backups, privacy documents and data subject requests.</li>
     </ul>
   )],
   ["7. Processing of personal information", (
     <div className="grid gap-2">
-      <p><b>Purposes:</b> running PHANTA for workshops (WhatsApp messaging, bookings, Flyer Lady posts and ads, results), billing and tax, security and audit, and meeting legal obligations.</p>
-      <p><b>Data subjects:</b> workshop owners and staff (name, email, phone, role, login records, billing details: cards are held by Paystack, not VANTA); workshops&apos; customers (name, phone, vehicle, bookings, service history, WhatsApp messages, whose text is cleared after 14 days); suppliers (contact and banking details).</p>
+      <p><b>Purposes:</b> running PHANTA for clients (WhatsApp messaging, bookings, Flyer Lady posts and ads, results), billing and tax, security and audit, and meeting legal obligations.</p>
+      <p><b>Data subjects:</b> client owners and staff (name, email, phone, role, login records, billing details: cards are held by Paystack, not VANTA); clients&apos; customers (name, phone, vehicle or item serviced, bookings, service history, WhatsApp messages, whose text is cleared after 14 days); suppliers (contact and banking details).</p>
       <p><b>Recipients:</b> our service providers, only as needed to run the service: Meta (WhatsApp, Facebook), Google (Google Ads), OpenAI (AI message drafts), Railway (hosting), Cloudflare (image storage), Sentry (error reports) and Paystack (payments); and authorities where the law requires.</p>
       <p><b>Cross-border transfers:</b> information is hosted and processed mainly in the United States and the European Union by these providers, under their binding data-protection terms (POPIA section 72).</p>
-      <p><b>Security:</b> encrypted connections and encrypted access keys, database-enforced separation of each workshop&apos;s data, role-based access, login lockout and 12-character passwords, an audit log, automatic deletion schedules and a breach response plan.</p>
+      <p><b>Security:</b> encrypted connections and encrypted access keys, database-enforced separation of each client&apos;s data, role-based access, login lockout and 12-character passwords, an audit log, automatic deletion schedules and a breach response plan.</p>
     </div>
   )],
   ["8. How to request a record", (

@@ -28,12 +28,12 @@ const features = [
   {
     icon: "bell",
     title: "Service reminders",
-    description: "Automated reminders based on each vehicle's service history, so nothing falls through the cracks."
+    description: "Automated reminders based on each customer's service history, so nothing falls through the cracks."
   },
   {
     icon: "chart",
-    title: "Customer & vehicle management",
-    description: "Complete customer records with full vehicle service history in one place."
+    title: "Customer & service records",
+    description: "Complete customer records with full service history in one place."
   },
   {
     icon: "workflow",
@@ -58,7 +58,7 @@ const process = [
 ];
 
 const faqs = [
-  ["Who is VANTA built for?", "VANTA is built for automotive workshops and service businesses that want to reduce admin and automate day-to-day operations."],
+  ["Who is VANTA built for?", "VANTA is built for service businesses, starting with automotive workshops, that want to reduce admin and automate day-to-day operations."],
   ["Does this replace my current tools?", "It can sit above existing booking, messaging, and payment tools first, then consolidate more workflow logic over time."],
   ["Can it support multiple branches?", "Yes. Multi-branch and franchise support is built in, with team and user management across locations."],
   ["What does the AI receptionist actually do?", "It handles common customer questions and captures booking details automatically, reducing missed calls and manual admin."]
@@ -77,13 +77,13 @@ export default function Home() {
           <div>
             <div className="mb-6 inline-flex items-center gap-3 rounded-full border border-chartreuse/20 bg-chartreuse/[0.06] px-4 py-2 text-sm text-chartreuse">
               <span className="size-2 bg-chartreuse shadow-[0_0_18px_rgba(224,255,79,0.8)]" />
-              AI-powered operating system for automotive workshops
+              AI-powered operating system for service businesses
             </div>
             <h1 className="text-balance font-heading text-5xl font-semibold tracking-[-0.06em] sm:text-6xl lg:text-7xl">
               Automate. Communicate. <span className="text-chartreuse">Grow.</span>
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-white/62">
-              VANTA Automations is an AI-powered operating system for automotive workshops and service businesses — automating bookings, customer communication, and daily operations so you can focus on servicing vehicles instead of managing paperwork.
+              VANTA Automations is an AI-powered operating system for service businesses — automating bookings, customer communication, and daily operations so you can focus on the work instead of managing paperwork.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button href="mailto:Hello@Vantaautomations.co.za">Email VANTA</Button>
@@ -109,11 +109,11 @@ export default function Home() {
             <div>
               <p className="text-sm uppercase tracking-[0.28em] text-chartreuse/80">Our mission</p>
               <h2 className="mt-3 font-heading text-3xl font-semibold tracking-tight">
-                An all-in-one AI-powered operating system for workshops.
+                An all-in-one AI-powered operating system for our clients.
               </h2>
             </div>
             <p className="text-lg leading-8 text-white/62">
-              We automate customer communication, business operations, and workflow management so workshops can focus on servicing vehicles instead of managing paperwork — reducing missed bookings, improving customer experience, and helping businesses scale efficiently.
+              We automate customer communication, business operations, and workflow management so clients can focus on the work instead of managing paperwork — reducing missed bookings, improving customer experience, and helping businesses scale efficiently.
             </p>
           </div>
         </div>
@@ -153,11 +153,11 @@ export default function Home() {
           <div>
             <p className="mb-4 text-sm uppercase tracking-[0.3em] text-chartreuse/80">Full platform</p>
             <h2 className="font-heading text-4xl font-semibold tracking-[-0.04em] md:text-5xl">
-              Everything a growing workshop needs, in one system.
+              Everything a growing business needs, in one system.
             </h2>
           </div>
           <p className="text-lg leading-8 text-white/58">
-            Beyond bookings and messaging, VANTA covers the operational layer workshops need to run and scale.
+            Beyond bookings and messaging, VANTA covers the operational layer clients need to run and scale.
           </p>
         </div>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
