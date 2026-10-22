@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { VantaLogo } from "./vanta-logo";
+import { COMPANY, LINKS } from "./site-info";
 
 export function Footer() {
   return (
@@ -30,13 +31,22 @@ export function Footer() {
           <a href="mailto:Hello@Vantaautomations.co.za" className="mt-4 inline-block text-sm text-chartreuse transition hover:text-white">
             Hello@Vantaautomations.co.za
           </a>
+          <p className="mt-6 text-xs leading-6 text-white/40">
+            {COMPANY.name} · Reg. {COMPANY.registration}
+            <br />
+            {COMPANY.address} · {COMPANY.email}
+            <br />
+            Information Officer: {COMPANY.infoOfficer}
+          </p>
         </div>
-        <div className="grid grid-cols-2 gap-8 text-sm text-white/56 sm:grid-cols-4">
+        <div className="grid grid-cols-2 gap-8 text-sm text-white/56 sm:grid-cols-3">
           {[
             ["About", "/about"],
             ["Solutions", "/#solutions"],
             ["Privacy", "/privacy"],
-            ["Terms", "/terms"]
+            ["Terms", "/terms"],
+            ["PAIA manual", LINKS.paia],
+            ["Log in", LINKS.login]
           ].map(([item, href]) => (
             <Link key={item} href={href} className="transition hover:text-chartreuse">
               {item}
