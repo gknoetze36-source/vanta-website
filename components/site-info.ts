@@ -1,9 +1,8 @@
 // One place for company details, legal links and contact addresses (ECTA s43, PAIA s51).
 export const COMPANY = {
-  name: "Vanta Automations (Pty) Ltd",
-  registration: "TODO-CIPC-NUMBER",
+  name: "Vanta Automations (PTY) Ltd",
+  registration: "2026/355499/07",
   address: "79 Krom Street, Pretoria, Gauteng, 0186",
-  phone: "TODO-PHONE",
   infoOfficer: "George Knoetze",
   email: "info@vantaautomations.co.za",
   supportEmail: "Hello@Vantaautomations.co.za"

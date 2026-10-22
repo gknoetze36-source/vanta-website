@@ -34,7 +34,7 @@ export function Footer() {
           <p className="mt-6 text-xs leading-6 text-white/40">
             {COMPANY.name} · Reg. {COMPANY.registration}
             <br />
-            {COMPANY.address} · {COMPANY.phone} · {COMPANY.email}
+            {COMPANY.address} · {COMPANY.email}
             <br />
             Information Officer: {COMPANY.infoOfficer}
           </p>

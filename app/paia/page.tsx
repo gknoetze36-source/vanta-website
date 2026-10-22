@@ -20,7 +20,7 @@ const sections: [string, React.ReactNode][] = [
       <li>Head of the body and Information Officer: {COMPANY.infoOfficer}, Director</li>
       <li>Deputy Information Officer: none appointed. Requests go to the Information Officer.</li>
       <li>Address: {COMPANY.address}</li>
-      <li>Telephone: {COMPANY.phone}</li>
+      <li>General enquiries: <A href={`mailto:${COMPANY.supportEmail}`}>{COMPANY.supportEmail}</A></li>
       <li>Email: <A href={`mailto:${COMPANY.email}`}>{COMPANY.email}</A></li>
     </ul>
   )],

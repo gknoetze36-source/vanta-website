@@ -114,3 +114,27 @@ body::after {
   background-size: 28px 18px, 38px 26px;
   image-rendering: pixelated;
 }
+
+/* Floating pixel ghost launcher, same as the one inside PHANTA. */
+.ghost-launcher { position: relative; width: 64px; height: 72px; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.ghost-launcher:focus-visible { outline: 2px solid #E0FF4F; outline-offset: 4px; border-radius: 16px; }
+.ghost-launcher .ghost-shape {
+  display: block; width: 56px; height: 56px; margin: 0 auto;
+  background: url('/images/phanta-ghost-float.png') center/contain no-repeat;
+  image-rendering: pixelated; filter: drop-shadow(0 0 6px rgba(224,255,79,.25));
+  animation: ghost-float 3s ease-in-out infinite;
+}
+.ghost-launcher::after {
+  content: ""; position: absolute; left: 50%; bottom: 2px; width: 34px; height: 6px; margin-left: -17px;
+  border-radius: 50%; background: rgba(0,0,0,.45); filter: blur(2px); animation: ghost-shadow 3s ease-in-out infinite;
+}
+.ghost-launcher:hover .ghost-shape { filter: drop-shadow(0 0 10px rgba(224,255,79,.45)); }
+.ghost-launcher .ghost-bubble {
+  position: absolute; right: 68px; bottom: 4px; width: 230px; padding: 9px 11px;
+  border: 1px solid rgba(255,255,255,.12); border-radius: 13px; background: #00272B; color: rgba(255,255,255,.75);
+  font-size: .75rem; text-align: left; pointer-events: none; opacity: 0; transform: translateY(5px); transition: opacity .2s, transform .2s;
+}
+.ghost-launcher:hover .ghost-bubble, .ghost-launcher:focus-visible .ghost-bubble { opacity: 1; transform: none; }
+@keyframes ghost-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+@keyframes ghost-shadow { 0%,100% { transform: scaleX(1); opacity: .55; } 50% { transform: scaleX(.7); opacity: .3; } }
+@media (prefers-reduced-motion: reduce) { .ghost-launcher .ghost-shape, .ghost-launcher::after { animation: none; } }

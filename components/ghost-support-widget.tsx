@@ -230,9 +230,10 @@ export function GhostSupportWidget() {
         onClick={() => setOpen((v) => !v)}
         aria-label={open ? "Close the Ghost" : "Open the Ghost assistant"}
         aria-expanded={open}
-        className="flex h-16 w-16 items-center justify-center rounded-full border border-[#E0FF4F]/25 bg-[#06392F] shadow-[0_0_24px_rgba(224,255,79,0.15)] transition-colors hover:border-[#E0FF4F]/60"
+        className="ghost-launcher"
       >
-        <PixelGhost size={34} />
+        <span className="ghost-shape" aria-hidden="true" />
+        {!open && <span className="ghost-bubble">Need a hand? Ask me about PHANTA, POPIA or PAIA.</span>}
       </button>
     </div>
   );
