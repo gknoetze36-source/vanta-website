@@ -16,11 +16,11 @@ const LOGIN: Link = ["Log in to PHANTA", LINKS.login];
 const TOPICS: Topic[] = [
   {
     keys: ["what is", "phanta", "do you do", "services", "about", "how does it work", "features"],
-    intro: "PHANTA is VANTA's system for automotive workshops. It works for you after hours:",
+    intro: "PHANTA is VANTA's system for service businesses, starting with automotive workshops. It works for you after hours:",
     steps: [
       "A WhatsApp assistant that answers customers and books them in. It always says it's AI, and your team can reply themselves at any time.",
       "Your own online booking page, with new bookings showing live on your Dashboard.",
-      "Booking confirmations, reminders and \"vehicle ready\" messages sent for you.",
+      "Booking confirmations, reminders and \"ready for collection\" messages sent for you.",
       "Flyer Lady: write a special once and post it to Facebook, with optional Facebook or Google ads on your own budget.",
       "A Results page showing which posts and ads brought bookings in."
     ],
@@ -31,7 +31,7 @@ const TOPICS: Topic[] = [
     keys: ["start", "started", "onboard", "onboarding", "sign up", "signup", "register", "join", "try", "demo", "login", "log in", "account"],
     intro: "Getting started with PHANTA:",
     steps: [
-      "Email us with your workshop's name and town. We set up your workshop account and send you your login.",
+      "Email us with your business name and town. We set up your account and send you your login.",
       "Log in to PHANTA with the link below.",
       "Inside PHANTA, the Ghost walks you through connecting WhatsApp, Facebook and Google, step by step."
     ],
@@ -40,13 +40,13 @@ const TOPICS: Topic[] = [
   },
   {
     keys: ["cost", "price", "pricing", "plan", "plans", "how much", "fee", "rand", "subscription"],
-    intro: "PHANTA is a monthly subscription based on your workshop's size, billed every 30 days, with 30 days' notice to cancel. Ads are optional and paid by you directly to Meta or Google, never through us. Email us for a quote.",
+    intro: "PHANTA is a monthly subscription based on the size of your business, billed every 30 days, with 30 days' notice to cancel. Ads are optional and paid by you directly to Meta or Google, never through us. Email us for a quote.",
     links: [EMAIL],
     next: ["How do I get started?", "What is PHANTA?"]
   },
   {
     keys: ["whatsapp", "message", "messages", "chat", "ai", "bot", "reply"],
-    intro: "PHANTA's WhatsApp assistant uses your workshop's own number:",
+    intro: "PHANTA's WhatsApp assistant uses your business's own number:",
     steps: [
       "It answers questions and books customers in, and says clearly that it's AI.",
       "Your team can reply from PHANTA's Inbox, or from the WhatsApp Business app, and the AI steps back.",
@@ -71,7 +71,7 @@ const TOPICS: Topic[] = [
     intro: "How we handle personal information under POPIA:",
     steps: [
       `${COMPANY.name} has a registered Information Officer: ${COMPANY.infoOfficer}.`,
-      "Each workshop's customer data is kept separate, enforced by the database, and access keys are stored encrypted.",
+      "Each client's customer data is kept separate, enforced by the database, and access keys are stored encrypted.",
       "For your customers we act on your behalf under a Data Processing Agreement. We never sell personal information.",
       "WhatsApp message text is cleared after 14 days, and inactive customers are anonymised after 3 years."
     ],
@@ -93,7 +93,7 @@ const TOPICS: Topic[] = [
     keys: ["delete", "deletion", "remove", "erase", "forget"],
     intro: "To have your personal information deleted:",
     steps: [
-      "If you're a workshop's customer, ask that workshop first. They decide about your data, and we help them.",
+      "If you're a customer of one of our clients, ask that business first. They decide about your data, and we help them.",
       `Or email ${COMPANY.email} and we'll take care of it.`,
       "Data from Facebook can be deleted through our data deletion page."
     ],
