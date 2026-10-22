@@ -1,58 +1,24 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Link from "next/link";
-import { VantaLogo } from "./vanta-logo";
 import { COMPANY, LINKS } from "./site-info";
 
 export function Footer() {
   return (
-    <footer className="relative mt-24 overflow-hidden border-t border-white/10">
-      <div className="terrain absolute inset-x-0 bottom-0 h-24 opacity-25" />
-      <div className="absolute bottom-20 left-0 right-0 flex h-12 items-end gap-1 opacity-50">
-        {Array.from({ length: 80 }).map((_, index) => (
-          <motion.span
-            key={index}
-            className="w-full bg-chartreuse/20"
-            style={{ height: `${8 + ((index * 13) % 34)}px` }}
-            animate={{ opacity: [0.16, 0.42, 0.18] }}
-            transition={{ duration: 4, repeat: Infinity, delay: (index % 9) * 0.2 }}
-          />
-        ))}
-      </div>
-      <div className="container-shell relative z-10 grid gap-10 py-16 md:grid-cols-[1fr_auto]">
-        <div>
-          <div className="mb-4">
-            <VantaLogo />
-          </div>
-          <p className="max-w-xl text-white/58">
-            Intelligent automation infrastructure for service businesses that want cleaner operations, faster communication, and measurable growth.
-          </p>
-          <a href="mailto:Hello@Vantaautomations.co.za" className="mt-4 inline-block text-sm text-chartreuse transition hover:text-white">
-            Hello@Vantaautomations.co.za
-          </a>
-          <p className="mt-6 text-xs leading-6 text-white/40">
-            {COMPANY.name} · Reg. {COMPANY.registration}
-            <br />
-            {COMPANY.address} · {COMPANY.email}
-            <br />
-            Information Officer: {COMPANY.infoOfficer}
-          </p>
-        </div>
-        <div className="grid grid-cols-2 gap-8 text-sm text-white/56 sm:grid-cols-3">
-          {[
-            ["About", "/about"],
-            ["Solutions", "/what-we-do/#solutions"],
-            ["Privacy", "/privacy"],
-            ["Terms", "/terms"],
-            ["PAIA manual", LINKS.paia],
-            ["Log in", LINKS.login]
-          ].map(([item, href]) => (
-            <Link key={item} href={href} className="transition hover:text-chartreuse">
-              {item}
-            </Link>
-          ))}
-        </div>
+    <footer className="mt-20 border-t border-rule">
+      <div className="mx-auto max-w-5xl px-5 py-8 text-xs leading-6 text-mute">
+        <nav className="mb-3 flex flex-wrap gap-x-5 gap-y-1 text-sm text-ink">
+          <Link href="/" className="hover:underline">Home</Link>
+          <Link href="/what-we-do/" className="hover:underline">What we do</Link>
+          <Link href="/about/" className="hover:underline">About us</Link>
+          <Link href="/privacy/" className="hover:underline">Privacy</Link>
+          <Link href="/terms/" className="hover:underline">Terms</Link>
+          <Link href={LINKS.paia} className="hover:underline">PAIA manual</Link>
+          <a href={LINKS.login} className="hover:underline">Log in</a>
+        </nav>
+        <p>
+          {COMPANY.name}, reg. {COMPANY.registration}, {COMPANY.address}. Information Officer: {COMPANY.infoOfficer}.{" "}
+          <a href={`mailto:${COMPANY.supportEmail}`} className="underline">{COMPANY.supportEmail}</a>,{" "}
+          <a href={`mailto:${COMPANY.email}`} className="underline">{COMPANY.email}</a>
+        </p>
       </div>
     </footer>
   );

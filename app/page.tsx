@@ -14,7 +14,7 @@ const APPS: [label: string, href: string, Icon: LucideIcon, highlight?: boolean]
 // Welcome screen: one viewport, light, the floating ghost and six app-style buttons.
 export default function Home() {
   return (
-    <main className="home-light flex min-h-[100svh] flex-col items-center justify-center gap-3 px-5 py-8 text-center">
+    <main className="flex min-h-[100svh] flex-col items-center justify-center gap-3 px-5 py-8 text-center">
       <span className="hero-ghost" aria-hidden="true" />
       <span className="hero-ghost-shadow" aria-hidden="true" />
       <h1 className="font-heading text-[clamp(30px,4vw,44px)] font-bold tracking-[-0.02em]">Vanta Automations</h1>

@@ -2,122 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #00272b;
-  --foreground: #f9fafb;
-  --muted: rgba(249, 250, 251, 0.66);
-  --line: rgba(249, 250, 251, 0.12);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-  background: var(--background);
-}
-
-body {
-  margin: 0;
-  color: var(--foreground);
-  background:
-    radial-gradient(circle at 15% 4%, rgba(224, 255, 79, 0.12), transparent 26rem),
-    radial-gradient(circle at 86% 18%, rgba(6, 57, 47, 0.95), transparent 34rem),
-    linear-gradient(180deg, #00272b 0%, #00191d 58%, #001114 100%);
-  font-family: var(--font-inter), sans-serif;
-  overflow-x: hidden;
-}
-
-main {
-  position: relative;
-}
-
-main::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.32;
-  background:
-    linear-gradient(90deg, transparent 0 48%, rgba(224, 255, 79, 0.08) 49% 51%, transparent 52% 100%) 0 0 / 28px 28px,
-    linear-gradient(0deg, transparent 0 48%, rgba(249, 250, 251, 0.04) 49% 51%, transparent 52% 100%) 0 0 / 28px 28px;
-  mask-image: linear-gradient(to bottom, transparent, black 18%, black 82%, transparent);
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -2;
-  background-image:
-    linear-gradient(rgba(249, 250, 251, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(249, 250, 251, 0.035) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: linear-gradient(to bottom, black, transparent 72%);
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-  opacity: 0.14;
-  background-image:
-    radial-gradient(circle, rgba(224, 255, 79, 0.42) 1px, transparent 1px);
-  background-size: 42px 42px;
-  mask-image: radial-gradient(circle at 50% 10%, black, transparent 62%);
-}
-
-::selection {
-  color: #00272b;
-  background: #e0ff4f;
-}
-
-.container-shell {
-  width: min(1180px, calc(100% - 40px));
-  margin-inline: auto;
-}
-
-.glass {
-  border: 1px solid var(--line);
-  background: linear-gradient(145deg, rgba(249, 250, 251, 0.08), rgba(249, 250, 251, 0.025));
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
-  backdrop-filter: blur(22px);
-}
-
-.pixel-corner {
-  clip-path: polygon(0 0, calc(100% - 14px) 0, calc(100% - 14px) 7px, 100% 7px, 100% 100%, 14px 100%, 14px calc(100% - 7px), 0 calc(100% - 7px));
-}
-
-.soft-border {
-  border: 1px solid rgba(249, 250, 251, 0.1);
-}
-
-.text-balance {
-  text-wrap: balance;
-}
-
-.terrain {
-  background-image:
-    linear-gradient(90deg, rgba(224, 255, 79, 0.2) 1px, transparent 1px),
-    linear-gradient(rgba(224, 255, 79, 0.16) 1px, transparent 1px);
-  background-size: 18px 18px;
-}
-
-.pixel-floor {
-  background-image:
-    linear-gradient(90deg, rgba(224, 255, 79, 0.34) 0 8px, transparent 8px 16px),
-    linear-gradient(90deg, rgba(249, 250, 251, 0.08) 0 6px, transparent 6px 15px);
-  background-size: 28px 18px, 38px 26px;
-  image-rendering: pixelated;
-}
+/* One light theme for the whole site (homepage design 2). */
+html { scroll-behavior: smooth; background: #F2F5F1; }
+body { margin: 0; background: #F2F5F1; color: #00272B; font-family: var(--font-inter), sans-serif; overflow-x: hidden; }
+* { box-sizing: border-box; }
+::selection { color: #00272B; background: #E0FF4F; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid #00272B; outline-offset: 3px; border-radius: 10px; }
+.card { border: 1px solid #D5DED8; background: #FFFFFF; border-radius: 16px; padding: 24px; }
+.icon-tile { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: #00272B; color: #E0FF4F; flex-shrink: 0; }
+.ghost-mark { display: inline-block; width: 28px; height: 28px; background: url('/images/phanta-ghost-float.png') center/contain no-repeat; image-rendering: pixelated; }
 
 /* Floating pixel ghost launcher, same as the one inside PHANTA. */
 .ghost-launcher { position: relative; width: 64px; height: 72px; padding: 0; border: 0; background: transparent; cursor: pointer; }
-.ghost-launcher:focus-visible { outline: 2px solid #E0FF4F; outline-offset: 4px; border-radius: 16px; }
+.ghost-launcher:focus-visible { outline: 2px solid #00272B; outline-offset: 4px; border-radius: 16px; }
 .ghost-launcher .ghost-shape {
   display: block; width: 56px; height: 56px; margin: 0 auto;
   background: url('/images/phanta-ghost-float.png') center/contain no-repeat;
@@ -131,7 +28,7 @@ body::after {
 .ghost-launcher:hover .ghost-shape { filter: drop-shadow(0 0 10px rgba(224,255,79,.45)); }
 .ghost-launcher .ghost-bubble {
   position: absolute; right: 68px; bottom: 4px; width: 230px; padding: 9px 11px;
-  border: 1px solid rgba(255,255,255,.12); border-radius: 13px; background: #00272B; color: rgba(255,255,255,.75);
+  border: 1px solid #D5DED8; border-radius: 13px; background: #FFFFFF; color: #4A5F5B; box-shadow: 0 8px 24px -12px rgba(0,39,43,.35);
   font-size: .75rem; text-align: left; pointer-events: none; opacity: 0; transform: translateY(5px); transition: opacity .2s, transform .2s;
 }
 .ghost-launcher:hover .ghost-bubble, .ghost-launcher:focus-visible .ghost-bubble { opacity: 1; transform: none; }
@@ -139,11 +36,6 @@ body::after {
 @keyframes ghost-shadow { 0%,100% { transform: scaleX(1); opacity: .55; } 50% { transform: scaleX(.7); opacity: .3; } }
 @media (prefers-reduced-motion: reduce) { .ghost-launcher .ghost-shape, .ghost-launcher::after { animation: none; } }
 
-/* Light welcome screen (homepage design 2). Covers the dark site background on this page only. */
-.home-light { position: relative; z-index: 1; background: #F2F5F1; color: #00272B; }
-.home-light::after { display: none; }
-.home-light .app-tile { color: #00272B; }
-.home-light a:focus-visible { outline: 2px solid #00272B; outline-offset: 4px; border-radius: 18px; }
 .hero-ghost { display: block; width: 80px; height: 80px; background: url('/images/phanta-ghost-float.png') center/contain no-repeat; image-rendering: pixelated; animation: ghost-float 3s ease-in-out infinite; }
 .hero-ghost-shadow { display: block; width: 54px; height: 8px; border-radius: 50%; background: rgba(0,39,43,.18); margin: -4px 0 10px; animation: ghost-shadow 3s ease-in-out infinite; }
 @media (min-width: 768px) { .hero-ghost { width: 96px; height: 96px; } }

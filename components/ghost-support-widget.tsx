@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Send, X } from "lucide-react";
-import { PixelGhost } from "@/components/pixel-ghost";
 import { COMPANY, LINKS } from "@/components/site-info";
 
 type Link = [label: string, href: string];
@@ -155,23 +154,23 @@ export function GhostSupportWidget() {
   return (
     <div className="fixed bottom-6 right-6 z-[60] flex flex-col items-end gap-3">
       {open && (
-        <section aria-label="Vanta Automations Ghost assistant" className="flex max-h-[min(640px,80vh)] w-[min(360px,calc(100vw-2rem))] flex-col rounded-2xl border border-white/10 bg-[#00272B]/95 shadow-[0_0_40px_rgba(0,0,0,0.4)] backdrop-blur-xl">
-          <header className="flex items-center justify-between border-b border-white/10 p-4">
+        <section aria-label="Vanta Automations Ghost assistant" className="flex max-h-[min(640px,80vh)] w-[min(360px,calc(100vw-2rem))] flex-col rounded-2xl border border-rule bg-white text-ink shadow-[0_24px_60px_-24px_rgba(0,39,43,0.45)]">
+          <header className="flex items-center justify-between border-b border-rule p-4">
             <div className="flex items-center gap-3">
-              <PixelGhost size={32} glow={false} />
+              <span className="ghost-mark" aria-hidden="true" />
               <div>
-                <p className="font-heading text-sm font-semibold text-white">Vanta Automations Ghost</p>
-                <p className="text-xs text-white/50">Answers straight away · people reply within a day</p>
+                <p className="font-heading text-sm font-semibold">Vanta Automations Ghost</p>
+                <p className="text-xs text-mute">Answers straight away. People reply within a day.</p>
               </div>
             </div>
-            <button onClick={() => setOpen(false)} aria-label="Close the Ghost" className="text-white/40 transition-colors hover:text-white">
+            <button onClick={() => setOpen(false)} aria-label="Close the Ghost" className="text-mute transition-colors hover:text-ink">
               <X size={16} />
             </button>
           </header>
 
-          <nav aria-label="Quick links" className="flex flex-wrap gap-2 border-b border-white/10 px-4 py-3">
+          <nav aria-label="Quick links" className="flex flex-wrap gap-2 border-b border-rule px-4 py-3">
             {QUICK.map(([label, href]) => (
-              <a key={label} href={href} className="rounded-full border border-[#E0FF4F]/30 px-3 py-1 text-xs text-[#E0FF4F] transition-colors hover:bg-[#E0FF4F] hover:text-[#00272B]">
+              <a key={label} href={href} className="rounded-full border border-rule px-3 py-1 text-xs font-medium text-ink transition-colors hover:border-ink">
                 {label}
               </a>
             ))}
@@ -180,9 +179,9 @@ export function GhostSupportWidget() {
           <div className="flex-1 space-y-3 overflow-y-auto p-4 text-sm" aria-live="polite">
             {msgs.map((m, i) =>
               m.role === "user" ? (
-                <p key={i} className="ml-8 rounded-2xl bg-[#E0FF4F]/15 px-3 py-2 text-white">{m.topic.intro}</p>
+                <p key={i} className="ml-8 rounded-2xl bg-ink px-3 py-2 text-white">{m.topic.intro}</p>
               ) : (
-                <div key={i} className="mr-4 rounded-2xl bg-white/[0.06] px-3 py-3 leading-6 text-white/75">
+                <div key={i} className="mr-4 rounded-2xl bg-paper px-3 py-3 leading-6 text-ink">
                   <p>{m.topic.intro}</p>
                   {m.topic.steps && (
                     <ol className="mt-2 list-decimal space-y-1 pl-5">{m.topic.steps.map((s) => <li key={s}>{s}</li>)}</ol>
@@ -190,7 +189,7 @@ export function GhostSupportWidget() {
                   {m.topic.links && (
                     <div className="mt-3 flex flex-wrap gap-2">
                       {m.topic.links.map(([label, href]) => (
-                        <a key={label} href={href} className="rounded-full bg-[#E0FF4F] px-3 py-1.5 text-xs font-medium text-[#00272B] transition-colors hover:bg-white">
+                        <a key={label} href={href} className="rounded-full bg-chartreuse px-3 py-1.5 text-xs font-medium text-ink transition-colors hover:bg-ink hover:text-white">
                           {label}
                         </a>
                       ))}
@@ -199,7 +198,7 @@ export function GhostSupportWidget() {
                   {m.topic.next && i === msgs.length - 1 && (
                     <div className="mt-3 flex flex-wrap gap-2">
                       {m.topic.next.map((n) => (
-                        <button key={n} onClick={() => ask(n)} className="rounded-full border border-white/15 px-3 py-1 text-xs text-white/70 transition-colors hover:border-[#E0FF4F]/50 hover:text-white">
+                        <button key={n} onClick={() => ask(n)} className="rounded-full border border-rule bg-white px-3 py-1 text-xs text-mute transition-colors hover:border-ink hover:text-ink">
                           {n}
                         </button>
                       ))}
@@ -211,15 +210,15 @@ export function GhostSupportWidget() {
             <div ref={end} />
           </div>
 
-          <form onSubmit={(e) => { e.preventDefault(); ask(text); }} className="flex gap-2 border-t border-white/10 p-3">
+          <form onSubmit={(e) => { e.preventDefault(); ask(text); }} className="flex gap-2 border-t border-rule p-3">
             <input
               value={text}
               onChange={(e) => setText(e.target.value)}
               placeholder="Ask the Ghost…"
               aria-label="Ask the Ghost a question"
-              className="flex-1 rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 text-sm text-white placeholder:text-white/35 focus:border-[#E0FF4F]/50 focus:outline-none"
+              className="flex-1 rounded-full border border-rule bg-paper px-4 py-2 text-sm text-ink placeholder:text-mute focus:border-ink focus:outline-none"
             />
-            <button type="submit" aria-label="Send" className="flex h-9 w-9 items-center justify-center rounded-full bg-[#E0FF4F] text-[#00272B] transition-colors hover:bg-white">
+            <button type="submit" aria-label="Send" className="flex h-9 w-9 items-center justify-center rounded-full bg-ink text-chartreuse transition-colors hover:bg-[#06392F]">
               <Send size={15} />
             </button>
           </form>

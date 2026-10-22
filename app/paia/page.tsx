@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 const A = ({ href, children }: { href: string; children: React.ReactNode }) => (
-  <a href={href} className="text-chartreuse underline-offset-4 hover:underline">{children}</a>
+  <a href={href} className="font-medium text-ink underline underline-offset-4">{children}</a>
 );
 
 const sections: [string, React.ReactNode][] = [
@@ -64,19 +64,18 @@ const sections: [string, React.ReactNode][] = [
 export default function PaiaPage() {
   return (
     <ContentPage
-      eyebrow="Legal"
       title="PAIA Manual"
       intro="Prepared under section 51 of the Promotion of Access to Information Act 2 of 2000 and the Protection of Personal Information Act 4 of 2013."
     >
-      <div className="mb-10 grid gap-4 border border-white/10 bg-white/[0.035] p-6 text-sm text-white/62 sm:grid-cols-2">
-        <p><span className="text-chartreuse">Version:</span> 22 October 2026</p>
-        <p><span className="text-chartreuse">Next review:</span> October 2027</p>
+      <div className="mb-8 flex flex-wrap gap-x-8 gap-y-1 text-sm text-mute">
+        <p><span className="font-medium text-ink">Version:</span> 22 October 2026</p>
+        <p><span className="font-medium text-ink">Next review:</span> October 2027</p>
       </div>
-      <div className="grid gap-4">
+      <div className="grid gap-3">
         {sections.map(([title, body]) => (
-          <article key={title} className="border border-white/10 bg-white/[0.035] p-6">
-            <h2 className="font-heading text-2xl font-semibold">{title}</h2>
-            <div className="mt-3 leading-7 text-white/58">{body}</div>
+          <article key={title} className="card">
+            <h2 className="font-heading text-xl font-bold">{title}</h2>
+            <div className="mt-2 max-w-[75ch] leading-7 text-mute">{body}</div>
           </article>
         ))}
       </div>
