@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { LucideIcon } from "lucide-react";
 import { BellRing, Bot, CalendarCheck, Check, ClipboardList, FileText, MessageCircle } from "lucide-react";
 import { ContentPage, Section } from "@/components/content-page";
-import { COMPANY, LINKS } from "@/components/site-info";
+import { COMPANY } from "@/components/site-info";
 
 export const metadata: Metadata = {
   title: "What we do | Vanta Automations",
@@ -115,7 +115,6 @@ export default function WhatWeDoPage() {
         <p className="mt-2 max-w-[50ch] text-[#B5C9C2]">Email us your business name and town, and we&apos;ll set up your account.</p>
         <div className="mt-6 flex flex-wrap gap-3">
           <a href={`mailto:${COMPANY.supportEmail}?subject=Get%20started%20with%20PHANTA`} className="rounded-[10px] bg-chartreuse px-5 py-3 font-medium text-ink hover:bg-white">Email us to get started</a>
-          <a href={LINKS.login} className="rounded-[10px] border border-white/25 px-5 py-3 font-medium hover:border-white">Log in</a>
         </div>
       </section>
     </ContentPage>
